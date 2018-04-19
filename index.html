@@ -1,0 +1,79 @@
+<!DOCTYPE Html>
+<html>
+
+<head>
+    <title>Contact</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body onload="load()">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-home">
+                <a href="./index.html">
+                    Home
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="viewUser()">View Users</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form" id="inputData">
+
+        <h1>Contact Form</h1>
+
+        <div class="top-row">
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="First Name" id="firstname" maxlength="20" />
+            </div>
+
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="Last Name" id="lastname" maxlength="20" />
+            </div>
+        </div>
+
+        <div class="field-wrap">
+            <input type="email" required autocomplete="off" placeholder="Email Address" id="email" maxlength="45" />
+        </div>
+
+        <div class="field-wrap">
+            <input type="text" onkeypress="numbersOnly(event)" required autocomplete="off" placeholder="Phone" id="phone" maxlength="14" />
+        </div>
+
+        <button type="submit" class="button button-block" id="submit" onclick="store()">Save</button>
+        <button type="submit" class="button button-block" id="clear" onclick="clearFields()">Clear</button>
+
+    </div>
+
+    <div class="view" id="viewUsers">
+        <table class="table table-hover" style="width:920px; max-width:inherit">
+
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th> </th>
+                </tr>
+            </thead>
+
+            <tbody id="userDetails">
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="js/style.min.js "></script>
+</body>
+
+</html>
